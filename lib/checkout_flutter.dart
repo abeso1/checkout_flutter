@@ -13,6 +13,16 @@ class CheckoutFlutter {
   ///type of enviroment used
   Enviroment? enviroment;
 
+  ///seting type of [enviroment]
+  void setEnviroment(Enviroment enviromentType){
+    enviroment = enviromentType;
+  }
+
+  ///seting [apiPublicKey]
+    void setApiPublicKey(String apiPublicKeyToSet){
+    apiPublicKey = apiPublicKeyToSet;
+  }
+
   ///method for generating token that is later used on server side to process payment
   String generateTokenForCardPayment(){
     if(enviroment == null){
